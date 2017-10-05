@@ -39,10 +39,10 @@ class AnagramChecker extends Component {
         const areAnagrams = this.state.areAnagrams;
 
         return (
-            <div className="col-sm-12">
-                <form onSubmit={this.checkAnagrams.bind(this)} className="form-horizontal">
+            <div className="container col-sm-12 anagram-container">
+                <form role="form" onSubmit={this.checkAnagrams.bind(this)} className="form-horizontal">
                     <h2>Anagram Checker</h2>
-                    <div className={classNames({'hide': !showAnswer})}>
+                    <div className={classNames({'hide': !showAnswer}, "form-group")}>
                         { areAnagrams 
                             ? <div className="alert alert-success">
                                 <strong>Congrats!</strong> The strings are anagrams of each other!
@@ -53,18 +53,18 @@ class AnagramChecker extends Component {
                         }
                     </div>
                     <div className="form-group">
-                        <label className="col-sm-2 control-label">String One:</label>
+                        <label className="col-sm-3 control-label">String One:</label>
                         <div className="col-sm-8">
-                            <input type="text" className="form-control" name="stringOne" onChange={this.stringChange}/>
+                            <input type="text" for="stringOne" className="form-control" name="stringOne" onChange={this.stringChange}/>
                         </div>
                     </div>
                     <div className="form-group">
-                        <label className="col-sm-2 control-label">String Two:</label>
+                        <label className="col-sm-3 control-label">String Two:</label>
                         <div className="col-sm-8">
-                            <input type="text" className="form-control" name="stringTwo" onChange={this.stringChange} />
+                            <input type="text" for="stringTwo" className="form-control" name="stringTwo" onChange={this.stringChange} />
                         </div>
                     </div>
-                    <input type="submit" value="Submit" />
+                    <input type="submit" className="btn btn-primary submit-button" value="Submit" />
                 </form>
             </div>
         )
