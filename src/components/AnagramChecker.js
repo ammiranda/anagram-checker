@@ -39,16 +39,16 @@ class AnagramChecker extends Component {
         const areAnagrams = this.state.areAnagrams;
 
         return (
-            <div className="col-sm-6">
+            <div className="col-sm-12">
                 <form onSubmit={this.checkAnagrams.bind(this)} className="form-horizontal">
                     <h2>Anagram Checker</h2>
                     <div className={classNames({'hide': !showAnswer})}>
                         { areAnagrams 
                             ? <div className="alert alert-success">
-                                The strings are anagrams of one another!
+                                <strong>Congrats!</strong> The strings are anagrams of each other!
                               </div> :
                               <div className="alert alert-danger">
-                                  The strings are not anagrams of each other!
+                                  <strong>Sorry!</strong> The strings are not anagrams of each other!
                               </div>
                         }
                     </div>
