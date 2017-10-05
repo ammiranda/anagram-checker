@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
-import AnagramChecker from './AnagramChecker';
+import './css/App.css';
+import AnagramChecker from './components/AnagramChecker';
 
 class App extends Component {
   render() {
