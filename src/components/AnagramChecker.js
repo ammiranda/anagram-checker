@@ -13,10 +13,16 @@ class AnagramChecker extends Component {
             areAnagrams: false
         };
 
+        // Scoping non-react lifecycle methods to the component's scope
         this.checkAnagrams = this.checkAnagrams.bind(this);
         this.stringChange = this.stringChange.bind(this);
     }
 
+    /**
+     * Method that fires on the form submission that runs the anagram check on the current string values
+     * that lie in state. Also updates showAnswer to true so the alert message container will be visible.
+     * @param {Event} e 
+     */
     checkAnagrams(e) {
         e.preventDefault();
         this.setState({
@@ -25,6 +31,10 @@ class AnagramChecker extends Component {
         });
     }
 
+    /**
+     * Method that updates the string values for either stringOne or stringTwo in the component's state
+     * @param {Event} e - Event object from an onChange event relating to either of the text inputs
+     */
     stringChange(e) {
         const name = e.target.name;
         const value = e.target.value;
