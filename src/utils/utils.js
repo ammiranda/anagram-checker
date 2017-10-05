@@ -1,3 +1,10 @@
+/**
+ * Function that determines whether the two strings are anagrams of each other through comparing 
+ * char frequency counting and decrementing
+ * @param {String} str1 
+ * @param {String} str2
+ * @return {boolean} - Determines if the two strings are anagrams (true) or not (false)
+ */
 export function areAnagrams(str1, str2) {
     if (str1.length !== str2.length) {
       return false; 
